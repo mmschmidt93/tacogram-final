@@ -8,8 +8,8 @@ gem "sqlite3", "~> 1.4"
 gem "puma", "~> 5.0"
 gem "bcrypt", "~> 3.1.7"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
-# gem "image_processing", ">= 1.2"
-# gem "aws-sdk-s3", require: false
+gem "image_processing", ">= 1.2"
+gem "aws-sdk-s3", require: false
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -20,3 +20,6 @@ group :development do
   gem "web-console"
 end
 
+group :production do
+  gem "pg"
+end
